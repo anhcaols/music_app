@@ -156,6 +156,16 @@ function loadCurrentSong(index){
             $(".equaliser-container").classList.add("block")
             $(".soundwave-img").classList.add("active")
     }   
+    // Xu ly set thoi gian bai hat
+     audio.addEventListener('loadeddata',() => {
+        const duration = audio.duration
+        let totalMin = Math.floor(duration / 60);
+        let totalSec = Math.floor(duration % 60);
+        if (totalSec < 10) {
+            totalSec = '0' + totalSec;
+        }
+        musicDuration.innerText = `${totalMin}:${totalSec}`;
+    })
 }
 
 function nextSong(){
@@ -238,16 +248,7 @@ function handleEvents(){
         }
      })
      
-     // Xu ly set thoi gian bai hat
-     audio.addEventListener('loadeddata',() => {
-        const duration = audio.duration
-        let totalMin = Math.floor(duration / 60);
-        let totalSec = Math.floor(duration % 60);
-        if (totalSec < 10) {
-            totalSec = '0' + totalSec;
-        }
-        musicDuration.innerText = `${totalMin}:${totalSec}`;
-    })
+     
      // handle khi tien do bai hat thay doi
      audio.ontimeupdate = function(e){
         if(audio.duration){
