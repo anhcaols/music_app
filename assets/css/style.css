@@ -410,7 +410,6 @@ margin-right: 0;
 @media only screen and (max-width: 739px) {    
     #app {
         width: 360px;
-        overflow: auto;
     }
     
     .play-list::-webkit-scrollbar {
