@@ -284,13 +284,13 @@ function handleEvents(){
         }
         handlePlay()
         renderSong()
-        
      })
 
      //handle prev song
      prevBtn.addEventListener("click",() => {
         if(randomBtn.classList.contains("active")){
             randomSong()
+            
         }
         else{
             prevSong()
@@ -316,9 +316,11 @@ function handleEvents(){
      audio.onended = function(){
         if(repeatBtn.classList.contains("active")){
             audio.play()
+            
         } else{
-            nextBtn.click()
+            nextBtn.click()  
         }
+     
     }
 
     //handel when click play list
