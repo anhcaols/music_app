@@ -152,12 +152,10 @@ function loadCurrentSong(index){
     cdImg.style.backgroundImage = `url('${songs[index].image}')`
     audio.src = `${songs[index].path}`
     cdThumbAnimate.pause()
-    setTimeout(function(){
-        if(!togglePlay.classList.contains('pause')){
+    if(!togglePlay.classList.contains('pause')){
             $(".equaliser-container").classList.add("block")
             $(".soundwave-img").classList.add("active")
-        }
-    }, 1000)   
+    }   
 }
 
 function nextSong(){
