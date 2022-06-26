@@ -157,7 +157,7 @@ function loadCurrentSong(index){
             $(".equaliser-container").classList.add("block")
             $(".soundwave-img").classList.add("active")
         }
-    }, 3000)   
+    }, 1000)   
 }
 
 function nextSong(){
