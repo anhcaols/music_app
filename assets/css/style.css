@@ -408,8 +408,12 @@ margin-right: 0;
   }
 
 /* Mobile */
-@media only screen and (max-width: 739px) {
+@media only screen and (max-width: 739px) {    
     #app {
         width: 360px;
+        overflow: auto;
+    }
+    .play-list::-webkit-scrollbar {
+        width: 0;
     }
 }
